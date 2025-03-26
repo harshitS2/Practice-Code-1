@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  useEffect(() => {
+    // unlimited renders
+    // console.log("Rendered Once");
+    // setCount((prev) => prev + 1);
+  });
   return (
     <>
-      <button onClick={() => setCount((prev) => prev + 1)}>{count -1}+1: {count}</button>
+      <h1>UseEffect</h1>
+      <p>Rendered {count} times</p>
     </>
   );
 }
