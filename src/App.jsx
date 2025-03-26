@@ -4,14 +4,13 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    // unlimited renders
-    // console.log("Rendered Once");
-    // setCount((prev) => prev + 1);
-  });
+    setCount((prev) => prev + 1);
+  }, []);
   return (
     <>
       <h1>UseEffect</h1>
       <p>Rendered {count} times</p>
+      <p>This renders only once when the page loads</p>
     </>
   );
 }
